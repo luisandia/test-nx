@@ -1,0 +1,28 @@
+{
+  "root": "apps/edr-frontend-e2e",
+  "sourceRoot": "apps/edr-frontend-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/edr-frontend-e2e/cypress.json",
+        "devServerTarget": "edr-frontend:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "edr-frontend:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/edr-frontend-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["edr-frontend"]
+}
