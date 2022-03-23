@@ -1,4 +1,8 @@
 {
   "name": "myorgtestls",
-  "version": "0.0.1"
+  "version": "0.0.9",
+  "dependencies": {
+    "@primer/react": "^35.1.0",
+    "styled-components": "^5.3.3"
+  }
 }

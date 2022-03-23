@@ -1,7 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('edr-frontend', () => {
-
+describe('dashboard-vendor', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {
@@ -9,6 +8,6 @@ describe('edr-frontend', () => {
     cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome edr-frontend');
+    getGreeting().contains('Welcome dashboard-vendor');
   });
 });

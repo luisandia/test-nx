@@ -2,7 +2,7 @@
   "extends": "./tsconfig.base.json",
   "files": [],
   "include": [],
-  "references": [
-    { "path": "./libs/courseitem" },
-  ]
+  "compilerOptions": {
+    "composite": true
+  },
 }

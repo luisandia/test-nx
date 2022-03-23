@@ -10,6 +10,8 @@
     "courseitem-e2e": "apps/courseitem-e2e",
     "dashboard-publisher": "apps/dashboard-publisher",
     "dashboard-publisher-e2e": "apps/dashboard-publisher-e2e",
+    "dashboard-vendor": "apps/dashboard-vendor",
+    "dashboard-vendor-e2e": "apps/dashboard-vendor-e2e",
     "edr-frontend": "apps/edr-frontend",
     "edr-frontend-e2e": "apps/edr-frontend-e2e",
     "eslint-rules": "tools/eslint-rules",

@@ -1,0 +1,73 @@
+{
+  "root": "apps/dashboard-vendor",
+  "sourceRoot": "apps/dashboard-vendor/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/dashboard-vendor",
+        "index": "apps/dashboard-vendor/src/index.html",
+        "baseHref": "/",
+        "main": "apps/dashboard-vendor/src/main.tsx",
+        "polyfills": "apps/dashboard-vendor/src/polyfills.ts",
+        "tsConfig": "apps/dashboard-vendor/tsconfig.app.json",
+        "assets": [
+          "apps/dashboard-vendor/src/favicon.ico",
+          "apps/dashboard-vendor/src/assets"
+        ],
+        "styles": ["apps/dashboard-vendor/src/styles.css"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/dashboard-vendor/src/environments/environment.ts",
+              "with": "apps/dashboard-vendor/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "dashboard-vendor:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "dashboard-vendor:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/dashboard-vendor/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/dashboard-vendor"],
+      "options": {
+        "jestConfig": "apps/dashboard-vendor/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
