@@ -1,0 +1,18 @@
+{
+  "root": "libs/api-fetch",
+  "sourceRoot": "libs/api-fetch/src",
+  "projectType": "library",
+  "targets": {
+    "generate-sources": {
+      "executor": "@trumbitta/nx-plugin-openapi:generate-api-lib-sources",
+      "options": {
+        "generator": "typescript-fetch",
+        "sourceSpecPathOrUrl": "libs/api-spec/src/api-spec.openapi.yml",
+        "additionalProperties": "",
+        "globalProperties": ""
+      }
+    }
+  },
+  "implicitDependencies": ["api-spec"],
+  "tags": []
+}

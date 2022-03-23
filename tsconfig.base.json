@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@edr/api-docs": ["libs/api-docs/src/index.ts"],
+      "@edr/api-fetch": ["libs/api-fetch/src/index.ts"],
+      "@edr/courseitem": ["libs/courseitem/src/index.ts"],
+      "@myorg/mylib": ["libs/mylib/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

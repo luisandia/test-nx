@@ -1,0 +1,18 @@
+{
+  "root": "libs/api-docs",
+  "sourceRoot": "libs/api-docs/src",
+  "projectType": "library",
+  "targets": {
+    "generate-sources": {
+      "executor": "@trumbitta/nx-plugin-openapi:generate-api-lib-sources",
+      "options": {
+        "generator": "html2",
+        "sourceSpecPathOrUrl": "libs/api-spec/src/api-spec.openapi.yml",
+        "additionalProperties": "",
+        "globalProperties": ""
+      }
+    }
+  },
+  "implicitDependencies": ["api-spec"],
+  "tags": []
+}

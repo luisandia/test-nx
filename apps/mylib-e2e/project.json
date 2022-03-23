@@ -1,0 +1,28 @@
+{
+  "root": "apps/mylib-e2e",
+  "sourceRoot": "apps/mylib-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/mylib-e2e/cypress.json",
+        "devServerTarget": "mylib:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "mylib:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/mylib-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["mylib"]
+}

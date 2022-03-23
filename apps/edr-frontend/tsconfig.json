@@ -13,7 +13,7 @@
     "noFallthroughCasesInSwitch": true
   },
   "files": [],
-  "include": [],
+  "include": ["src/**/*.ts", "../../libs/courseitem/**/*.ts"],
   "references": [
     {
       "path": "./tsconfig.app.json"

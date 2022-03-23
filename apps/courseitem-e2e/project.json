@@ -1,0 +1,28 @@
+{
+  "root": "apps/courseitem-e2e",
+  "sourceRoot": "apps/courseitem-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/courseitem-e2e/cypress.json",
+        "devServerTarget": "courseitem:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "courseitem:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/courseitem-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["courseitem"]
+}

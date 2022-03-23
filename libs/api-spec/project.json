@@ -1,0 +1,7 @@
+{
+  "root": "libs/api-spec",
+  "sourceRoot": "libs/api-spec/src",
+  "projectType": "library",
+  "targets": {},
+  "tags": []
+}

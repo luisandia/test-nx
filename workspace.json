@@ -1,7 +1,19 @@
 {
   "version": 2,
   "projects": {
+    "angular-app": "apps/angular-app",
+    "angular-app-e2e": "apps/angular-app-e2e",
+    "api-docs": "libs/api-docs",
+    "api-fetch": "libs/api-fetch",
+    "api-spec": "libs/api-spec",
+    "courseitem": "libs/courseitem",
+    "courseitem-e2e": "apps/courseitem-e2e",
+    "dashboard-publisher": "apps/dashboard-publisher",
+    "dashboard-publisher-e2e": "apps/dashboard-publisher-e2e",
     "edr-frontend": "apps/edr-frontend",
-    "edr-frontend-e2e": "apps/edr-frontend-e2e"
+    "edr-frontend-e2e": "apps/edr-frontend-e2e",
+    "eslint-rules": "tools/eslint-rules",
+    "mylib": "libs/mylib",
+    "mylib-e2e": "apps/mylib-e2e"
   }
 }
